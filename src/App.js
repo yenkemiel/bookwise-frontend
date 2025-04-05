@@ -17,12 +17,19 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>📚 BookWise 書籍管理系統</h1>
-      <BookForm selectedBook={selectedBook} onSuccess={handleSuccess} />
-      <BookList key={reloadKey} onEdit={handleEdit} />
+    <div className="container py-4">
+      <h1 className="text-primary text-center">📚 BookWise 書籍管理系統</h1>
+      <div className="row">
+        <div className="col-md-6">
+          <BookForm selectedBook={selectedBook} onSuccess={handleSuccess} />
+        </div>
+        <div className="col-md-6">
+          <BookList key={reloadKey} onEdit={handleEdit} />
+        </div>
+      </div>
     </div>
   );
+  
 }
 
 export default App;
